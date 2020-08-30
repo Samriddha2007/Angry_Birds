@@ -41,7 +41,7 @@ function setup(){
     bird = new Bird(100,100);
 
     platform = new Ground(150,350,300,200);
-    slingshot = new Slingshot(bird.body,log6.body);
+    slingshot = new Slingshot(bird.body,{x:200,y:100});
 }
 
 function draw(){
@@ -64,8 +64,18 @@ function draw(){
     box5.display();
     log4.display();
     log5.display();
-    log6.display();
+   // log6.display();
     platform.display();
     bird.display();
     slingshot.display();
+}
+
+function mouseDragged()
+{
+    Matter.Body.setPosition(bird.body,{x:mouseX,y:mouseY});
+}
+
+function mouseReleased()
+{
+    slingshot.fly();
 }
