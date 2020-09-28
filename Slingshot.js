@@ -22,9 +22,13 @@ class Slingshot
     {
        this.sling.bodyA = null; 
     }
+    attach(body)
+    {
+      this.sling.bodyA = body;
+    }
     display()
     {
-        image(this.sling1,200,55);
+         image(this.sling1,200,55);
         image(this.sling2,170,55);
         //image
     if(this.sling.bodyA)
@@ -50,4 +54,6 @@ class Slingshot
       pop();
     }
     }
+
+    
 }
