@@ -1,3 +1,13 @@
+array1 = [1,2,3,4,5];
+console.log(array1);
+console.log(array1[2]);
+array2 = [[1,2,3],[4,5,6],[7,8,9,10]];
+console.log(array2);
+console.log(array2[1][2]);
+array2.push("Hello");
+array2.pop();
+
+
 const Engine = Matter.Engine;
 const World= Matter.World;
 const Bodies = Matter.Bodies;
